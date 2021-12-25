@@ -1,6 +1,6 @@
 import { getImages } from '../constants/api'
 import { refs } from '../constants/refs'
-import { makePhotoCards } from '../components/PhotoCard/PhotoCard'
+import { makePhotoCards } from '../components/PhotoCards/PhotoCards'
 import Notiflix from 'notiflix'
 
 const store = {
