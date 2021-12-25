@@ -16,11 +16,13 @@
 .info {
   display: flex;
   justify-content: space-around;
+  padding: var(--s-padding);
 }
 
 .info * {
   display: flex;
   flex-direction: column;
+  padding: var(--xs-padding);
 }
 
 .card-image {
