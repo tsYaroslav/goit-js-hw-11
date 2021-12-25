@@ -1,0 +1,39 @@
+* {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: 1.5;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.load-more {
+  color: var(--primary-white);
+  padding: var(--padding);
+  background: var(--primary-blue);
+  border: 1px solid transparent;
+  border-radius: var(--b-radius);
+  margin: var(--margin);
+  &:hover {
+    cursor: pointer;
+    color: var(--primary-blue);
+    background: var(--primary-white);
+    border: 1px solid var(--primary-blue);
+    transition: 0.15s;
+  }
+}

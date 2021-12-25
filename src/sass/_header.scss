@@ -1,0 +1,40 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-blue);
+  padding: var(--padding);
+  box-shadow: var(--box-shadow);
+}
+
+.search-form {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  border-radius: var(--b-radius);
+  overflow: hidden;
+}
+
+.search-form input {
+  width: calc(100% - 50px);
+  padding: var(--padding);
+  border-color: transparent;
+  outline: none;
+}
+
+.search-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+#icon-search {
+  height: 100%;
+  padding: 12px;
+}

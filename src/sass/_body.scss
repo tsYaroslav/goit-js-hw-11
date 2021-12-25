@@ -1,0 +1,13 @@
+.main {
+  padding: var(--padding);
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--padding);
+  margin: calc(var(--margin) * -1);
+  width: 100%;
+}
