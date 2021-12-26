@@ -1,11 +1,18 @@
 import { getImages } from '../constants/api'
 import { refs } from '../constants/refs'
-import { makePhotoCards } from '../components/PhotoCards/PhotoCards'
+import { makePhotoCards } from '../components/photoCards/photoCards'
 import Notiflix from 'notiflix'
 
 const store = {
   page: 1,
   query: '',
+}
+
+const inputCheck = (e) => {
+  const input = refs.searchInput
+  if (input.value.charAt(0) === ' ') {
+    input.value = ''
+  }
 }
 
 const clickSubmit = (e) => {
@@ -26,9 +33,12 @@ const clickSubmit = (e) => {
         const res = await getImages(query)
         const data = await res.data
         if (data.totalHits) {
+          refs.loadMoreBtn.classList.remove('visually-hidden')
           Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`)
           makePhotoCards(data.hits)
-          refs.loadMoreBtn.classList.remove('visually-hidden')
+          if (data.totalHits <= 40) {
+            refs.loadMoreBtn.classList.add('visually-hidden')
+          }
         } else {
           refs.gallery.innerHTML = ''
           Notiflix.Notify.failure(
@@ -74,4 +84,9 @@ export let clickSubmitEvent = refs.searchForm.addEventListener(
 export let clickLoadMoreEvent = refs.loadMoreBtn.addEventListener(
   'click',
   clickLoadMore
+)
+
+export let inputCheckEvent = refs.searchInput.addEventListener(
+  'input',
+  inputCheck
 )

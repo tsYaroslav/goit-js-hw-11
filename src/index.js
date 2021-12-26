@@ -1,2 +1,6 @@
 import './sass/main.scss'
-import { clickSubmitEvent, clickLoadMoreEvent } from './app/App'
+import {
+  clickSubmitEvent,
+  clickLoadMoreEvent,
+  inputCheckEvent,
+} from './app/app'
